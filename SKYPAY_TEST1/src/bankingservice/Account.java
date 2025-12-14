@@ -36,6 +36,8 @@ public class Account implements AccountService{
     public void withdraw(int amount) {
         validateAmount(amount);
 
+        //CHECKER SOLDE
+        // (reelement ca sera un service séparé qui check SOLDE)
         if (amount > balance) {
             throw new IllegalArgumentException("Solde insuffisant");
         }
